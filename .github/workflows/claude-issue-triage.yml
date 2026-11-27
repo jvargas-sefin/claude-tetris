@@ -88,7 +88,14 @@ jobs:
             - Exactamente 1 de prioridad: priority:high | priority:medium | priority:low
             - Opcionales: good first issue | duplicate | invalid | help wanted
 
-            El `diagnosis` debe estar en español, en Markdown, con estas secciones (nivel `###`):
+            El `diagnosis` debe estar en español y escrito en Markdown válido que GitHub
+            (GitHub Flavored Markdown) renderice correctamente al publicarse como comentario:
+            usa encabezados `###`, listas con `-`, checklists `- [ ]`, código en línea con
+            `backticks`, bloques de código con fences ``` (indicando el lenguaje, p. ej.
+            ```js), tablas con `|` si hacen falta y referencias `archivo:línea` en
+            backticks. No uses HTML crudo ni sintaxis que GitHub no soporte. Dentro del
+            JSON, escapa correctamente los saltos de línea (`\n`) y las comillas.
+            Debe tener estas secciones (nivel `###`):
             - Resumen: qué se reporta o se pide, en 2-3 líneas.
             - Clasificación: tipo, área y prioridad elegidos, con una justificación breve.
             - Componentes afectados: archivos y funciones concretas (p. ej. `collide()`,
